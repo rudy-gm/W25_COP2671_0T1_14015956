@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class ColorState : State
 {
-    public ColorState(GameObject gameObject) : base(gameObject) { }
-
     MeshRenderer colorBlock;
-    float changeColorTime = 0.5f;
+    [SerializeField] float changeColorTime = 0.5f;
     float currentTime;
 
     public override void Enter()
@@ -17,7 +15,7 @@ public class ColorState : State
 
         base.Enter();
     }
-    public override void Update()
+    public override void DoWork()
     {
         currentTime = currentTime - Time.deltaTime;
         if (currentTime <= 0f)
@@ -26,7 +24,7 @@ public class ColorState : State
             colorBlock.material.SetColor("_BaseColor", color);
             currentTime = changeColorTime;
         }
-        base.Update();
+        base.DoWork();
     }
     public override void Exit()
     {

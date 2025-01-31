@@ -3,23 +3,27 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    public StateEnum StartingState;
-    [SerializeField] StateEvent stateEvent;
-    State currentState;
+    [SerializeField] List<State> states;
+    [SerializeField] State runningState;
+    int index = 0;
 
     private void Awake()
     {
-        currentState = GetState(StartingState);
+        //states = new List<State>(FindObjectsByType<State>(FindObjectsSortMode.None));
     }
     private void Update()
-    {        
-        currentState = currentState.Process();
-        stateEvent = currentState.Event;
-    }
-    private State GetState(StateEnum state)
-    {
-        if (state == StateEnum.COLOR) { return new ColorState(gameObject); } 
-        
-        return new ColorState(gameObject);
+    {   
+        runningState = states[index].Process();
+        if (runningState.Event == StateEvent.EXIT)
+        {
+            //index = ++index % states.Count;
+
+            index = index + 1;
+            if (index >= states.Count)
+            {
+                index = 0;
+            }
+            runningState = states[index];
+        }
     }
 }
