@@ -253,6 +253,8 @@ GameObject:
   - component: {fileID: 348720198}
   - component: {fileID: 348720197}
   - component: {fileID: 348720196}
+  - component: {fileID: 348720202}
+  - component: {fileID: 348720203}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -272,8 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e353c869c98134e429297b335eff0e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingState: 0
-  stateEvent: 0
+  states:
+  - {fileID: 348720202}
+  - {fileID: 348720203}
+  runningState: {fileID: 0}
 --- !u!65 &348720197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -363,6 +367,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &348720202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348720195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b2893afe2bfdd4bbf7980b18c2810b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeColorTime: 0.5
+--- !u!114 &348720203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348720195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5eac37d7d17e3f4d80fb71c6131fbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeScaleTime: 0.5
 --- !u!850595691 &481223275
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -436,7 +466,6 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
-  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -562,20 +591,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &534669907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cfa36a2e65175a4493b1bf96ab4acf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 5, z: -7}
-  player: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

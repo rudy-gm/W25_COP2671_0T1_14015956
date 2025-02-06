@@ -1,20 +1,11 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class State
+public class State : MonoBehaviour
 {
-    protected StateEnum name;
+    protected new StateEnum name;
     protected State nextState;
-    protected StateEvent stage;
-    protected Transform transform;
+    protected StateEvent stage = StateEvent.ENTER;
     public StateEvent Event => stage;
-
-
-    public State(GameObject gameObject)
-    {
-        transform = gameObject.transform;
-        stage = StateEvent.ENTER;
-    }
 
     public virtual void Enter()
     {
@@ -23,7 +14,7 @@ public class State
         if (Input.GetKeyDown(KeyCode.A))
             stage = StateEvent.UPDATE;
     }
-    public virtual void Update()
+    public virtual void DoWork()
     {
         Debug.Log("Update");
         if (Input.GetKeyDown(KeyCode.B))
@@ -44,7 +35,7 @@ public class State
     public State Process()
     {
         if (stage == StateEvent.ENTER) Enter();
-        if (stage == StateEvent.UPDATE) Update();
+        if (stage == StateEvent.UPDATE) DoWork();
         if (stage == StateEvent.EXIT)
         {
             Exit();  
@@ -56,7 +47,7 @@ public class State
 }
 public enum StateEnum
 {
-    COLOR
+    COLOR, SCALE
 }
 public enum StateEvent
 {
