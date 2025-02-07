@@ -21,6 +21,21 @@ public class Singleton {
         return instance;
     }
 }
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null) 
+        {
+            Instance = this;
+        }
+    }
+    public float speed;
+}
+
 ```
 
 In this example, the `Singleton` class has a private constructor to prevent other classes from instantiating it directly. The `getInstance()` method checks if the `instance` is `null`, and if so, it creates a new `Singleton` object and assigns it to `instance`. This ensures that only one instance of `Singleton` exists.

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    float powerupExtinguishTime = 1;
+    public float powerupExtinguishTime = 1;
 
     public virtual void SetPowerDownTime(float time)
     {

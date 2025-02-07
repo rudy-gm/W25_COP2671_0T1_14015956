@@ -6,7 +6,7 @@ public class SpeedupPowerup : PowerUp
     public override void Process()
     {
         currentSeed = GameManager.Instance.speed;
-        GameManager.Instance.speed = currentSeed * 1.3f;
+        GameManager.Instance.speed = currentSeed * 3f;
         base.Process();
     }
     public override void Cleanup()
