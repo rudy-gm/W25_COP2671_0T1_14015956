@@ -7,11 +7,16 @@ public class PowerupManager : MonoBehaviour
         if (other.TryGetComponent(out PowerUp powerUp))
         {
             gameObject.AddComponent(powerUp.GetType());
-            var newPowerup = GetComponent<PowerUp>();
-            newPowerup.Process();
+            Debug.Log(gameObject.name);
+
+            Debug.Log(powerUp.name);
+            powerUp.Process();
+
+            //var newPowerup = GetComponent<PowerUp>();
+            //newPowerup.Process();
 
 
-            Destroy(powerUp.gameObject);
+            Destroy(powerUp.gameObject, 05f);
         }            
     }
 }

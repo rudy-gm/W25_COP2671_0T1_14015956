@@ -1,41 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-public class CoinPickup : MonoBehaviour
+public class CoinPickup : PowerUp
 {
     [SerializeField] int coinValue;
-    //private void Awake()
-    //{
-    //}
+       
 
-    // private void OnEnable()
-    // {
-    //     _audioSource.volume = 0.5f;
-    //     _audioSource.Play();        
-    // }
-
-    private void OnEnable()
-    {
-        StartCoroutine(ReturnObject());
+    public override void Process()
+    {        
+        ScoreManager.Instance.OnScoreUpdate.Invoke(coinValue);
+        base.Process();
     }
 
-
-    private IEnumerator ReturnObject()
+    public override void Cleanup()
     {
-        yield return new WaitForSeconds(3);
-        CoinObjectPool.Instance.ReturnObjectToPool(this);
-        yield return null;
+        base.Cleanup();
     }
-
-
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.collider.TryGetComponent(out PlayerPiece playerPiece))
-    //    {
-    //        // ScoreManager.Instance.AddScore(coinValue);            
-    //        // SoundManager.Instance.PlayCoinCollectedSound();
-    //        CoinObjectPool.Instance.ReturnObjectToPool(this);
-    //    }
-    //}
 }
