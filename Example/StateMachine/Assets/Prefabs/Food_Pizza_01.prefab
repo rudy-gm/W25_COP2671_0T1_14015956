@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5879343084877628689}
   - component: {fileID: 527653623561993115}
   - component: {fileID: 2404291002576299930}
-  - component: {fileID: -4080947377585067201}
+  - component: {fileID: -8085835281152249858}
   m_Layer: 0
   m_Name: Food_Pizza_01
   m_TagString: Untagged
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupExtinguishTime: 10
---- !u!114 &-4080947377585067201
+--- !u!114 &-8085835281152249858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1107128773515011573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f01f8fb40fecb04583710352233a07e, type: 3}
+  m_Script: {fileID: 11500000, guid: 431ddbe0fff76074f8473c7b27d84697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 23
+  powerupExtinguishTime: 1

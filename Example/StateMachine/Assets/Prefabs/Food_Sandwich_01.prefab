@@ -97,11 +97,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5223342861112090926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f01f8fb40fecb04583710352233a07e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e6f117bf6a401c40b047ac32f296133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerupExtinguishTime: 1
-  coinValue: 4
 --- !u!65 &8031959982216808168
 BoxCollider:
   m_ObjectHideFlags: 0
