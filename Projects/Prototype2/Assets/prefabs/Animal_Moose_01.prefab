@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3523646970461351466}
   - component: {fileID: 6692464928735793823}
   - component: {fileID: 736939668462095178}
+  - component: {fileID: 6699656862402517801}
+  - component: {fileID: -2103580675173955927}
   m_Layer: 0
   m_Name: Animal_Moose_01
   m_TagString: Untagged
@@ -78,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232c1bbddb5270448bddd15f1d731b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 8
 --- !u!114 &736939668462095178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +93,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce70320f3dd48441915ba42e30f599b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6699656862402517801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290426973905883716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f39f0a92d0bf749816315473d94cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-2103580675173955927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290426973905883716}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.17, y: 0.46, z: 0.4}
+  m_Center: {x: 0, y: 0.23, z: 0.05}
 --- !u!1 &350484851220002254
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2728569062331271820}
   - component: {fileID: 4188369736773774850}
+  - component: {fileID: 6248695036403521833}
   m_Layer: 0
   m_Name: SM_Moose_Male_01
   m_TagString: Untagged
@@ -355,6 +391,27 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000014901161, y: 0.045301065, z: 0.16266179}
     m_Extent: {x: 0.10332231, y: 0.2796877, z: 0.26338276}
   m_DirtyAABB: 0
+--- !u!65 &6248695036403521833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941805040725563053}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.55, z: 0.52}
+  m_Center: {x: 0, y: 0.05, z: 0.15}
 --- !u!1 &3033467244298333648
 GameObject:
   m_ObjectHideFlags: 0
