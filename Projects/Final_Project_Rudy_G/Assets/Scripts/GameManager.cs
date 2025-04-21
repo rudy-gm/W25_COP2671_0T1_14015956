@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.AppUI.UI;
-using   TMPro; 
+using   TMPro;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int score = 0; 
     public TextMeshProUGUI scoreText;
     public bool isGameRunning = false;
+    public float resetDelay = 0.5f; 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,8 +33,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("Score: " + score);
         updaScoreText();
 
-        ResetBallPosition(); 
+        StartCoroutine(ResetBallAfterDelay());
         obstacleSpawner.SpawnObstacles(); 
+    }
+
+    private IEnumerator ResetBallAfterDelay(){
+        yield return new WaitForSeconds(resetDelay); // Wait for the specified delay
+
+        ResetBallPosition(); // Reset the ball position
     }
 
     private void ResetBallPosition(){
