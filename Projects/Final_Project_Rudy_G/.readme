@@ -1,0 +1,81 @@
+Game Title: Fubolinho
+Course Number: W25_COP2671_0T1
+Created By: Rudy Gutierrez
+SFID: 1401-5956
+
+-------------------------------------------------------------------------------------
+------------------------------ Game Description -------------------------------------
+
+Fubolinho is an exciting and fast-paced game where players navigate a ball through 
+obstacles to score goals. With skillful maneuvers and quick thinking, the objective 
+is to deliver the ball to the goal field while avoiding challenges in the field.
+
+-------------------------------------------------------------------------------------
+--------------------------- Main Gameplay Features ----------------------------------
+
+1 - Dynamic obstacle avoidance.
+
+2 - Goal delivery system to score points.
+
+3 - Engaging particle effects and sound effects for rewarding feedback.
+
+4 - Immersive background music to keep the momentum alive.
+
+-------------------------------------------------------------------------------------
+------------------------- Game Mechanics and Objectives -----------------------------
+
+-- Objective: -- 
+
+Deliver the ball to the goal field while avoiding obstacles to score points.
+
+-- Key Mechanics: --
+
+Object Avoidance: Players navigate through obstacles to reach the goal field.
+
+Scoring System: Players earn 1 point for each successful goal.
+
+Timer: You have 60 seconds. Complete as many goals as possible before time runs out.
+
+-------------------------------------------------------------------------------------
+----------------------------------- Key Features ------------------------------------
+
+-- Menu System: -- 
+Includes a main menu with options to start the game, view instructions, and quit.
+
+-- Pause Feature: --
+A pause menu allows players to resume, restart the game, or quit the game.
+
+-- Background Music and Sound Effects: --
+
+1 - Uplifting background music sets the atmosphere.
+
+2 - Sound effects play when goals are scored or obstacles are encountered.
+
+-- Particle Effects: -- 
+Celebrate each goal with dynamic particle effects, adding a visual reward.
+
+-------------------------------------------------------------------------------------
+------------------------------------- Controls --------------------------------------
+
+-- Movement: --
+Use WASD or arrow keys to move the ball.
+
+-- Pause: -- 
+Press the Escape key or use the on-screen pause button.
+
+-------------------------------------------------------------------------------------
+--------------------------------- Setup Instructions --------------------------------
+
+1 - Clone or download the project from the repository.
+
+2 - Open the project in Unity.
+
+3 - Load the Scene called "MainScene"
+
+4 - Play the game in Unity's Play Mode or build it for your preferred platform
+
+
+-------------------------------------------------------------------------------------
+---------------------------------- ENJOY THE GAME! ----------------------------------
+
+My personal record is 12 goals in under a minute. I hope you beat that. 
